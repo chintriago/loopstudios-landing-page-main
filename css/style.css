@@ -16,7 +16,7 @@ html {
 body {
     min-height: 100%;
     width: 100%;
-    /* font-family: 'Alata', sans-serif; */
+    font-family: 'Alata', sans-serif;
     /* font-family: 'Josefin Sans', sans-serif; */
 }
 
@@ -50,19 +50,33 @@ img {
     height: auto;
 }
 
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/* Javascript Classes */
+.add {
+    display: initial;
+}
+
+.remove {
+    display: none;
+}
+
 /* Navbar */
 header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "nav nav"
-    "nav-hero nav-hero";
+    grid-template-areas:
+        "nav nav"
+        "nav-hero nav-hero";
     background-image: url(../images/mobile/image-hero.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    padding: 3em 2em;
+    padding: 2.5em 2em;
     min-height: 100vh;
     width: 100%;
     margin-bottom: 6em;
@@ -76,13 +90,13 @@ nav {
 }
 
 .nav-logo {
-    align-self: center;    
+    align-self: center;
 }
 
- .nav-logo img {
+.nav-logo img {
     width: 145px;
     height: 45x;
- }
+}
 
 .desktop-menu {
     display: none;
@@ -92,13 +106,45 @@ nav {
     align-self: center;
 }
 
+/* Pop up mobile menu */
+.mobile-menu-open {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    padding: 2.5em 2em;
+}
+
+.container-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 32px;
+}
+
+.container-bottom {
+    margin-top: 8em;
+}
+
+.container-bottom ul {
+    width: fit-content;
+}
+
+.container-bottom li {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: .5em;
+}
+
+/* End of Mobile pop up menu */
 .nav-hero {
     /* margin: auto; */
     grid-area: nav-hero;
     height: 196.8px;
 }
 
-.nav-hero-text{
+.nav-hero-text {
     border: 3px solid white;
     color: white;
     padding: 1.5em;
@@ -168,7 +214,7 @@ nav {
 }
 
 .bottom-content-btn {
-    grid-row: 3  / 4;
+    grid-row: 3 / 4;
     margin: auto;
     padding: 2em 4em 6em;
 }
@@ -214,6 +260,7 @@ nav {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+
 /* Footer */
 
 footer {
@@ -231,7 +278,7 @@ footer {
 }
 
 .footer-intro img {
-  margin-bottom: 2em;
+    margin-bottom: 2em;
 }
 
 .footer-intro li {
@@ -259,3 +306,19 @@ footer small {
 
 /* Media Queries */
 /* need to fix site at 375px and under */
+@media screen and (min-width: 1440px) {
+
+    /* Navbar */
+    .mobile-menu {
+        display: none;
+    }
+
+    .desktop-menu {
+        display: initial;
+    }
+
+    .desktop-menu li {
+        display: inline-block;
+        color: white;
+    }
+}
