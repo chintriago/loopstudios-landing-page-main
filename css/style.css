@@ -314,6 +314,27 @@ footer small {
 @media screen and (min-width: 1440px) {
 
     /* header */
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "nav nav"
+            "nav-hero nav-hero";
+        background-image: url(../images/desktop/image-hero.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        padding: 5em 10em;
+        min-height: 100vh;
+        width: 100%;
+        margin-bottom: 6em;
+    }
+
+    .nav-hero {
+        width: 650px;
+    }
+
     .mobile-menu {
         display: none;
     }
@@ -325,5 +346,46 @@ footer small {
     .desktop-menu li {
         display: inline-block;
         color: white;
+    }
+
+    /* nav */
+    nav {
+        grid-area: nav;
+        display: flex;
+        justify-content: space-between;
+        height: 32px;
+    }
+
+    .nav-logo {
+        align-self: center;
+    }
+
+    .nav-logo img {
+        width: 145px;
+        height: 45x;
+    }
+
+    /* nav hero */
+    .nav-hero {
+        /* margin: auto; */
+        grid-area: nav-hero;
+        height: 196.8px;
+    }
+
+    .nav-hero-text {
+        border: 3px solid white;
+        color: white;
+        padding: 1.5em;
+        /* overflow-wrap: break-word; */
+    }
+
+    .nav-hero-text h1 {
+        font-size: 2.3rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 400;
+        letter-spacing: 2px;
+        line-height: 1;
+        text-transform: uppercase;
+        overflow-wrap: break-word;
     }
 }
