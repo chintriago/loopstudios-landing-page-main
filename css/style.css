@@ -1,4 +1,4 @@
-/* GENERAL/RESET */
+/* general/reset */
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
 
 :root {
@@ -55,7 +55,7 @@ a {
     text-decoration: inherit;
 }
 
-/* Javascript Classes */
+/* javascript classes */
 .add {
     display: initial;
 }
@@ -64,7 +64,7 @@ a {
     display: none;
 }
 
-/* Navbar */
+/* header*/
 header {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -82,6 +82,7 @@ header {
     margin-bottom: 6em;
 }
 
+/* nav */
 nav {
     grid-area: nav;
     display: flex;
@@ -106,8 +107,8 @@ nav {
     align-self: center;
 }
 
-/* Pop up mobile menu */
-.mobile-menu-open {
+/* pop up mobile menu */
+.mobile-menu-black {
     width: 100%;
     min-height: 100vh;
     background-color: black;
@@ -137,7 +138,7 @@ nav {
     padding: .5em;
 }
 
-/* End of Mobile pop up menu */
+/* nav hero */
 .nav-hero {
     /* margin: auto; */
     grid-area: nav-hero;
@@ -161,7 +162,8 @@ nav {
     overflow-wrap: break-word;
 }
 
-/* Top Content */
+/* main */
+/* top content */
 .top-content {
     padding: 0 2em;
 }
@@ -192,7 +194,7 @@ nav {
     letter-spacing: 0px;
 }
 
-/* Bottom Content */
+/* bottom content */
 .bottom-content {
     display: grid;
     grid-template-columns: 1fr;
@@ -261,8 +263,9 @@ nav {
     letter-spacing: 2px;
 }
 
-/* Footer */
+/* end of main */
 
+/* Footer */
 footer {
     width: 100%;
     background-color: var(--black);
@@ -304,11 +307,13 @@ footer small {
     font-family: 'Alata', sans-serif;
 }
 
+/* end of footer */
+
 /* Media Queries */
 /* need to fix site at 375px and under */
 @media screen and (min-width: 1440px) {
 
-    /* Navbar */
+    /* header */
     .mobile-menu {
         display: none;
     }

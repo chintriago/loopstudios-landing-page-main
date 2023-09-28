@@ -5,22 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Loopstudios landing page</title>
 </head>
 
 <body>
-  <div id="nav-black" class="remove mobile-menu-open">
+  <!-- mobile menu pop up start -->
+  <div id="mobile-menu-js" class="remove mobile-menu-black">
     <div class="container-top">
       <div class="nav-logo">
         <img src="images/logo.svg" alt="loopstudios logo">
       </div>
-      <div id="mobile-menu-1" class="mobile-menu">
-        <a href="#0"><img src="images/icon-close.svg" alt="icon close icon"></a>
+      <div id="exit-icon-js" class="mobile-menu">
+        <a href="#0"><img src="images/icon-close.svg" alt="icon close"></a>
       </div>
     </div>
     <div class="container-bottom">
@@ -43,13 +42,15 @@
       </ul>
     </div>
   </div>
+  <!-- mobile menu pop up end -->
+  <!-- Header start -->
   <header id="header">
     <nav>
       <div class="nav-logo">
         <img src="images/logo.svg" alt="loopstudios logo">
       </div>
       <div class="mobile-menu">
-        <a id="mobile-menu-2" href="#0"><img src="images/icon-hamburger.svg" alt="hamburger icon"></a>
+        <a id="hamburger-icon-js" href="#0"><img src="images/icon-hamburger.svg" alt="hamburger icon"></a>
       </div>
       <ul class="desktop-menu">
         <li>About</li>
@@ -65,6 +66,8 @@
       </div>
     </section>
   </header>
+  <!-- Header end -->
+  <!-- main start -->
   <main>
     <section class="top-content">
       <div class="hero-img">
@@ -124,6 +127,7 @@
       </div>
     </section>
   </main>
+  <!-- footer end -->
   <footer>
     <section class="footer-intro">
       <img src="images/logo.svg" alt="loopstudios logo">
@@ -155,6 +159,8 @@
       <small>© 2021 Loopstudios. All rights reserved.</small>
     </section>
   </footer>
+  <!-- main end -->
+  <!-- javascript code -->
   <script src="js/script.js"></script>
 </body>
 

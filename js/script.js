@@ -1,14 +1,14 @@
 let header = document.getElementById("header");
-let mobileMenu = document.getElementById("mobile-menu-2");
-let navBlack = document.getElementById("nav-black");
-let mobileMenuOpen = document.getElementById("mobile-menu-1");
+let mobileMenuJs = document.getElementById("mobile-menu-js");
+let hamburgerIcon = document.getElementById("hamburger-icon-js");
+let exitIcon = document.getElementById("exit-icon-js");
 
-mobileMenu.addEventListener('click', () => {
-    navBlack.classList.remove("remove");
+hamburgerIcon.addEventListener('click', () => {
+    mobileMenuJs.classList.remove("remove");
     header.classList.add("remove");
 });
 
-mobileMenuOpen.addEventListener('click', () => {
-    navBlack.classList.add("remove");
+exitIcon.addEventListener('click', () => {
+    mobileMenuJs.classList.add("remove");
     header.classList.remove("remove");
 });
