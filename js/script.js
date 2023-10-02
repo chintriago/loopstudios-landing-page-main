@@ -1,14 +1,17 @@
-let header = document.getElementById("header");
-let mobileMenuJs = document.getElementById("mobile-menu-js");
-let hamburgerIcon = document.getElementById("hamburger-icon-js");
-let exitIcon = document.getElementById("exit-icon-js");
+const body = document.querySelector("body");
+const header = document.getElementById("header");
+const mobileMenuJs = document.getElementById("mobile-menu-js");
+const hamburgerIcon = document.getElementById("hamburger-icon-js");
+const exitIcon = document.getElementById("exit-icon-js");
 
 hamburgerIcon.addEventListener('click', () => {
     mobileMenuJs.classList.remove("remove");
     header.classList.add("remove");
+    body.classList.add("overflow-hidden");
 });
 
 exitIcon.addEventListener('click', () => {
     mobileMenuJs.classList.add("remove");
     header.classList.remove("remove");
+    body.classList.remove("overflow-hidden");
 });

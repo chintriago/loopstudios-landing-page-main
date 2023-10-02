@@ -55,13 +55,23 @@ a {
     text-decoration: inherit;
 }
 
+button {
+    cursor: pointer;
+}
+
 /* javascript classes */
 .add {
     display: initial;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
 }
 
 .remove {
     display: none;
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }
 
 /* header*/
@@ -340,7 +350,10 @@ footer small {
     }
 
     .desktop-menu {
-        display: initial;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .desktop-menu li {
@@ -361,8 +374,8 @@ footer small {
     }
 
     .nav-logo img {
-        width: 145px;
-        height: 45x;
+        width: 175px;
+        height: 75x;
     }
 
     /* nav hero */
