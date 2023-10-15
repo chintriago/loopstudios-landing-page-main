@@ -46,7 +46,7 @@ ul {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -177,22 +177,31 @@ nav {
     text-transform: uppercase;
     overflow-wrap: break-word;
 }
+/* end of nav */
 
 /* main */
 /* top content */
-.top-content {
+.top-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0 2em;
 }
 
+
 .hero-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
+    margin-top: 3em;
+    /* text-align: center;
     padding: 1.75em;
-    margin-bottom: 2em;
+    margin-bottom: 2em; */
 }
 
-.hero-img {
-    margin-bottom: 1em;
-}
 
 .hero-text h2 {
     font-family: 'Josefin Sans', sans-serif;
@@ -206,8 +215,9 @@ nav {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     font-size: 1.05rem;
-    line-height: 1.4;
+    line-height: 1.6;
     letter-spacing: 0px;
+    padding: 1.5em;
 }
 
 /* bottom content */
@@ -365,7 +375,7 @@ footer small {
     .desktop-menu li {
         display: inline-block;
         color: white;
-        font-size: 1.25rem;
+        font-size: 1.1rem;
         margin-left: 1.25em;
     }
 
@@ -387,30 +397,81 @@ footer small {
     }
 
     /* nav hero */
-    .nav-hero {
-        /* margin: auto; */
-        grid-area: nav-hero;
-        height: 196.8px;
-    }
-
     .nav-hero-text {
-        border: 3px solid white;
-        color: white;
         padding: 2.5em;
-        /* overflow-wrap: break-word; */
     }
 
     .nav-hero-text h1 {
-        font-size: 4.8rem;
-        font-family: 'Josefin Sans', sans-serif;
+        font-size: 4.2rem;
         font-weight: 500;
-        letter-spacing: 2px;
         line-height: 1.1;
-        text-transform: uppercase;
-        overflow-wrap: break-word;
     }
 
     .nav-hero-br {
         display: none;
+    }
+    /* end of nav */
+    
+    /* main */
+    /* top content */
+    .top-container {
+        padding:  0;
+    }
+
+    .top-content {
+        width: 75%;
+        min-height: 450px;
+        max-height: 45vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .75fr .25fr 1fr;
+        grid-template-areas:
+            "hero-img purple-block purple-block"
+            "hero-img hero-text hero-text"
+            "hero-img hero-text hero-text";
+        padding: 0;  
+    }
+
+    .hero-img {
+        grid-area: hero-img;
+        margin-bottom: 0;
+
+    }
+
+    .hero-img img {
+        height: 100%;
+    }
+
+    .purple-block {
+        grid-area: purple-block;
+        display: initial;
+        width: 30%;
+        height: 100%;
+        /* need to find proper gradient color */
+        background-color: #c66dd0;
+
+    }
+
+    .hero-text {
+        /* removed flex for desktop */
+        display: initial;
+        grid-area: hero-text;
+        width: 75%;
+        margin: auto auto 0;
+        grid-row: 3/4;
+    }
+
+    .hero-text h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    .hero-text p {
+        padding: 0;
+        align-self: flex-end;
+        text-align: left;
+        color: var(--dark-gray);
+        font-weight: 600;
     }
 }
