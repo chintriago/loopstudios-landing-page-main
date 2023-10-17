@@ -156,7 +156,6 @@ nav {
 
 /* nav hero */
 .nav-hero {
-    /* margin: auto; */
     grid-area: nav-hero;
     height: 196.8px;
 }
@@ -166,7 +165,6 @@ nav {
     color: white;
     padding: 1.5em;
     max-width: 650px;
-    /* overflow-wrap: break-word; */
 }
 
 .nav-hero-text h1 {
@@ -474,11 +472,6 @@ footer small {
 
     /* bottom content */
     .bottom-container {
-        /* min-height: 100vh;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center; */
         padding: 0 0 12em 0;
     }
 
@@ -519,35 +512,35 @@ footer small {
 
     /* new background images for desktop */
     .deep-earth {
-        background-image: url(/images/desktop/image-deep-earth.jpg);
+        background-image: url(../images/desktop/image-deep-earth.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
     }
 
     .night-arcade {
-        background-image: url(/images/desktop/image-night-arcade.jpg);
+        background-image: url(../images/desktop/image-night-arcade.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
     }
 
     .soccer-team {
-        background-image: url(/images/desktop/image-soccer-team.jpg);
+        background-image: url(../images/desktop/image-soccer-team.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
     }
 
     .grid {
-        background-image: url(/images/desktop/image-grid.jpg);
+        background-image: url(../images/desktop/image-grid.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
     }
 
     .from-above {
-        background-image: url(/images/desktop/image-from-above.jpg);
+        background-image: url(../images/desktop/image-from-above.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
@@ -555,21 +548,21 @@ footer small {
     }
 
     .pocket-borealis {
-        background-image: url(/images/desktop/image-pocket-borealis.jpg);
+        background-image: url(../images/desktop/image-pocket-borealis.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
     }
 
     .curiosity {
-        background-image: url(/images/desktop/image-curiosity.jpg);
+        background-image: url(../images/desktop/image-curiosity.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
     }
 
     .fish-eye {
-        background-image: url(/images/desktop/image-fisheye.jpg);
+        background-image: url(../images/desktop/image-fisheye.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
