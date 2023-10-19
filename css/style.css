@@ -327,8 +327,8 @@ footer {
     text-align: center;
     padding: .5em 0;
     margin-bottom: .5em;
-    font-family: 'Alata', sans-serif;
-    /* font-family: 'Josefin Sans', sans-serif; */
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
 }
 
 .footer-end ul {
@@ -520,7 +520,7 @@ footer small {
 
     .grid-item {
         width: 268px;
-        height: 500px;
+        height: 475px;
     }
 
     /* removed grid images from mobile to desktop */
@@ -606,9 +606,12 @@ footer small {
 
     .footer-intro ul li {
         display: inline-block;
-        margin-right: 2.15em;
-        font-size: 1.15rem;
-        font-weight: 500;
-        font-family: 'Josefin Sans', sans-serif;
+        margin-right: 1.5em;
+        font-size: 1.10rem;
     }
+
+    .footer-end ul {
+        text-align: right;
+    }
+    /* end of footer */
 }
