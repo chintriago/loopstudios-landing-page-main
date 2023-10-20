@@ -91,7 +91,7 @@ header {
     grid-template-areas:
         "nav nav"
         "nav-hero nav-hero";
-    background-image: url(../images/mobile/image-hero.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)), url(../images/mobile/image-hero.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -289,6 +289,7 @@ main {
 .grid-item img {
     width: 100%;
     height: 100%;
+    filter: brightness(80%);
 }
 
 .grid-text {
@@ -297,7 +298,7 @@ main {
     left: 16px;
     color: white;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.05rem;
+    font-size: 1.25rem;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -320,15 +321,18 @@ footer {
 }
 
 .footer-intro img {
+    width: 145px;
+    height: 25px;
     margin-bottom: 2em;
 }
 
-.footer-intro li {
+.footer-intro ul li {
     text-align: center;
     padding: .5em 0;
     margin-bottom: .5em;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
+    font-size: .85rem;
 }
 
 .footer-end ul {
@@ -336,14 +340,22 @@ footer {
     margin-bottom: 1em;
 }
 
-.footer-end li {
+.footer-end ul li {
     display: inline-block;
     margin-right: 1em;
 }
 
+.footer-end img {
+    width: 20px;
+    height: 20px;
+}
+
 footer small {
     color: var(--very-dark-gray);
+    font-size: .75rem;
     font-family: 'Alata', sans-serif;
+    font-weight: 600;
+    letter-spacing: .5px;
 }
 
 /* end of footer */
@@ -354,7 +366,7 @@ footer small {
 
     /* header */
     header {
-        background-image: url(../images/desktop/image-hero.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)), url(../images/desktop/image-hero.jpg);
         padding: 5em 10em;
     }
 
@@ -403,7 +415,7 @@ footer small {
     }
 
     .nav-hero-text h1 {
-        font-size: 4.2rem;
+        font-size: 4rem;
         font-weight: 500;
         line-height: 1.1;
     }
@@ -528,37 +540,43 @@ footer small {
         display: none;
     }
 
+    .grid-text {
+        font-size: 1.8rem;
+        bottom: 40px;
+        left: 50px;
+    }
+
     /* new background images for desktop */
     .deep-earth {
-        background-image: url(../images/desktop/image-deep-earth.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)), url(../images/desktop/image-deep-earth.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
     }
 
     .night-arcade {
-        background-image: url(../images/desktop/image-night-arcade.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)), url(../images/desktop/image-night-arcade.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
     }
 
     .soccer-team {
-        background-image: url(../images/desktop/image-soccer-team.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)), url(../images/desktop/image-soccer-team.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
     }
 
     .grid {
-        background-image: url(../images/desktop/image-grid.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)), url(../images/desktop/image-grid.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
     }
 
     .from-above {
-        background-image: url(../images/desktop/image-from-above.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)), url(../images/desktop/image-from-above.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
@@ -566,21 +584,21 @@ footer small {
     }
 
     .pocket-borealis {
-        background-image: url(../images/desktop/image-pocket-borealis.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)), url(../images/desktop/image-pocket-borealis.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
     }
 
     .curiosity {
-        background-image: url(../images/desktop/image-curiosity.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)), url(../images/desktop/image-curiosity.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
     }
 
     .fish-eye {
-        background-image: url(../images/desktop/image-fisheye.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)), url(../images/desktop/image-fisheye.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
@@ -597,21 +615,25 @@ footer small {
     .footer-intro {
         margin-bottom: 0;
     }
-    
-    .footer-intro img {
-        width: 185px;
-        height: 30px;
-        margin-bottom: 2em;
-    }
 
     .footer-intro ul li {
         display: inline-block;
-        margin-right: 1.5em;
-        font-size: 1.10rem;
+        margin-right: 1em;
+        font-size: 1.05rem;
+    }
+
+    .footer-end {
+        padding-top: 1em;
     }
 
     .footer-end ul {
         text-align: right;
+        margin-bottom: 1.5em;
+    }
+
+    .footer-end ul li {
+        margin-right: 0;
+        margin-left: 1em;
     }
     /* end of footer */
 }
