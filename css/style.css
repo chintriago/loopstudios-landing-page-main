@@ -77,9 +77,20 @@ button {
 
 /* hover states */
 a.menu-hover:hover {
-    border-bottom: 2px solid white;
-    width: 12px;
+    position: relative;
+    padding-bottom: .5em;
 }
+
+a.menu-hover:before {
+    content : "";
+    position: absolute;
+    left    : 25%;
+    bottom  : 0;
+    height  : 4px;
+    width   : 50%;  /* or 100px */
+    border-bottom:2px solid white;
+    text-align: center;
+  }
 
 /* header*/
 header {
@@ -261,17 +272,17 @@ main {
 }
 
 .bottom-content-btn button {
-    padding: .5em 2.75em;
+    padding: .75em 2.75em;
     background-color: transparent;
     border: 2px solid var(--black);
     margin: 0;
     text-align: inherit;
     font-family: 'Alata', sans-serif;
     font-weight: 500;
-    font-size: 1.15rem;
+    font-size: 1rem;
     border-radius: 0;
     appearance: none;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     text-transform: uppercase;
 }
 
@@ -519,8 +530,13 @@ footer small {
     }
 
     .bottom-content-btn button {
-        border: 2.5px solid var(--dark-gray);
+        border: 2px solid var(--very-dark-gray);
         border-radius: 2px;
+    }
+
+    button:hover {
+        background-color: var(--black);
+        color: var(--white);
     }
 
     .bottom-content-grid {
