@@ -75,23 +75,6 @@ button {
     overflow: hidden;
 }
 
-/* hover states */
-a.menu-hover:hover {
-    position: relative;
-    padding-bottom: .5em;
-}
-
-a.menu-hover:before {
-    content : "";
-    position: absolute;
-    left    : 25%;
-    bottom  : 0;
-    height  : 4px;
-    width   : 50%;  /* or 100px */
-    border-bottom:2px solid white;
-    text-align: center;
-  }
-
 /* header*/
 header {
     min-height: 100vh;
@@ -374,7 +357,38 @@ footer small {
 /* Media Queries */
 /* need to fix site at 375px and under */
 @media screen and (min-width: 1440px) {
+    /* hover states */
+    .menu-hover:hover {
+        position: relative;
+        padding-bottom: .5em;
+    }
 
+    .menu-hover:before {
+        content : "";
+        position: absolute;
+        left    : 25%;
+        bottom  : 0;
+        height  : 4px;
+        width   : 50%;
+        border-bottom:2px solid white;
+        text-align: center;
+    }
+
+    .icon-hover:hover {
+        position: relative;
+        padding-bottom: .5em;
+    }
+
+    .icon-hover:before {
+        content : "";
+        position: absolute;
+        left    : 0;
+        bottom  : 0;
+        height  : 4px;
+        width   : 100%;
+        border-bottom:2px solid white;
+        text-align: center;
+    }
     /* header */
     header {
         background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)), url(../images/desktop/image-hero.jpg);
