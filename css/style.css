@@ -283,6 +283,7 @@ main {
 .grid-item img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     filter: brightness(80%);
 }
 
@@ -357,38 +358,6 @@ footer small {
 /* Media Queries */
 /* need to fix site at 375px and under */
 @media screen and (min-width: 1440px) {
-    /* hover states */
-    .menu-hover:hover {
-        position: relative;
-        padding-bottom: .5em;
-    }
-
-    .menu-hover:before {
-        content : "";
-        position: absolute;
-        left    : 25%;
-        bottom  : 0;
-        height  : 4px;
-        width   : 50%;
-        border-bottom:2px solid white;
-        text-align: center;
-    }
-
-    .icon-hover:hover {
-        position: relative;
-        padding-bottom: .5em;
-    }
-
-    .icon-hover:before {
-        content : "";
-        position: absolute;
-        left    : 0;
-        bottom  : 0;
-        height  : 4px;
-        width   : 100%;
-        border-bottom:2px solid white;
-        text-align: center;
-    }
     /* header */
     header {
         background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)), url(../images/desktop/image-hero.jpg);
@@ -449,6 +418,22 @@ footer small {
         display: none;
     }
 
+    /* hover states */
+    .menu-hover:hover {
+        position: relative;
+        padding-bottom: .5em;
+    }
+
+    .menu-hover:before {
+        content : "";
+        position: absolute;
+        left    : 25%;
+        bottom  : 0;
+        height  : 4px;
+        width   : 50%;
+        border-bottom:2px solid white;
+        text-align: center;
+    }
     /* end of nav */
 
     /* main */
@@ -564,8 +549,18 @@ footer small {
         width: 268px;
         height: 475px;
     }
+    /* hover states */
+    .grid-item:hover > .grid-img {
+        opacity: .2;
+        cursor: pointer;
+    }
 
-    /* removed grid images from mobile to desktop */
+    .grid-item:hover > .grid-text {
+        color: var(--black);
+        cursor: pointer;
+    }
+
+    /* removed grid images from mobile for desktop */
     .grid-item img {
         display: none;
     }
@@ -582,6 +577,8 @@ footer small {
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+        width: 100%;
+        height: 100%;
     }
 
     .night-arcade {
@@ -589,6 +586,8 @@ footer small {
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+        width: 100%;
+        height: 100%;
     }
 
     .soccer-team {
@@ -596,6 +595,8 @@ footer small {
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+        width: 100%;
+        height: 100%;
     }
 
     .grid {
@@ -603,6 +604,8 @@ footer small {
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+        width: 100%;
+        height: 100%;
     }
 
     .from-above {
@@ -610,6 +613,8 @@ footer small {
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+        width: 100%;
+        height: 100%;
 
     }
 
@@ -618,6 +623,8 @@ footer small {
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+        width: 100%;
+        height: 100%;
     }
 
     .curiosity {
@@ -625,6 +632,8 @@ footer small {
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+        width: 100%;
+        height: 100%;
     }
 
     .fish-eye {
@@ -632,6 +641,8 @@ footer small {
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+        width: 100%;
+        height: 100%;
     }
     /* end of main */
 
@@ -664,6 +675,22 @@ footer small {
     .footer-end ul li {
         margin-right: 0;
         margin-left: 1em;
+    }
+    /* hover states */
+    .icon-hover:hover {
+        position: relative;
+        padding-bottom: .5em;
+    }
+
+    .icon-hover:before {
+        content : "";
+        position: absolute;
+        left    : 0;
+        bottom  : 0;
+        height  : 4px;
+        width   : 100%;
+        border-bottom:2px solid white;
+        text-align: center;
     }
     /* end of footer */
 }
