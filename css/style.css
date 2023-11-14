@@ -419,43 +419,37 @@ footer small {
     }
 
     /* hover states */
-    .menu-hover:hover {
+
+    /* link used to solve hover bug when using ::before
+    https://stackoverflow.com/questions/44855982/draw-line-with-span-when-hover-over-link */
+    .menu-hover {
         position: relative;
         padding-bottom: .5em;
     }
 
-    .menu-hover:before {
+    .menu-hover::after {
         content : "";
         position: absolute;
         left    : 25%;
         bottom  : 0;
         height  : 4px;
-        width   : 50%;
+        width   : 0;
         border-bottom:2px solid white;
         text-align: center;
     }
+
+    .menu-hover:hover::after {
+        width: 50%;
+    }
+    
     /* end of nav */
 
     /* main */
     /* top content */
+    
     .top-container {
         padding: 0;
     }
-
-    /* .top-content {
-        width: 80%;
-        max-width: 1200px;
-        min-height: 475px;
-        max-height: 45vh;
-        display: grid;
-        place-items: initial;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: .75fr .25fr 1fr;
-        grid-template-areas:
-            "hero-img purple-block purple-block"
-            "hero-img hero-text hero-text"
-            "hero-img hero-text hero-text";
-    } */
 
     .top-content {
         position: absolute;
@@ -468,6 +462,7 @@ footer small {
         grid-template-areas:
             "hero-img hero-img purple-block"
             "hero-img hero-img hero-text";
+        /* used for hover effect */    
         z-index: 0;
     }
 
@@ -482,6 +477,7 @@ footer small {
         background-size: cover;
         width: 100%;
         height: 100%;
+        /* used for hover effect */
         z-index: 2;
         position: absolute;
     }
@@ -491,8 +487,7 @@ footer small {
         display: initial;
         width: 100%;
         height: 100%;
-        /* need to find proper gradient color */
-        background-color: blue;
+        /* used for hover effect */
         z-index: 1;
         position: absolute;
         background-color: white;
@@ -506,6 +501,7 @@ footer small {
         height: 100%;
         grid-column: 2/5;
         grid-row: 2/3;
+        /* used for hover effect */
         z-index: 3;
         position: absolute;
         background-color: white;
@@ -598,6 +594,9 @@ footer small {
         height: 475px;
     }
     /* hover states */
+
+    /* used z-index on parent and child elements to solve issue
+    where text was being affected by opacity */
     .grid-item:hover > .grid-img {
         opacity: .2;
         cursor: pointer;
@@ -725,20 +724,24 @@ footer small {
         margin-left: 1em;
     }
     /* hover states */
-    .icon-hover:hover {
+    .icon-hover {
         position: relative;
         padding-bottom: .5em;
     }
 
-    .icon-hover:before {
+    .icon-hover::after {
         content : "";
         position: absolute;
         left    : 0;
         bottom  : 0;
         height  : 4px;
-        width   : 100%;
+        width   : 0;
         border-bottom:2px solid white;
         text-align: center;
+    }
+
+    .icon-hover:hover::after {
+        width: 100%;
     }
     /* end of footer */
 }
