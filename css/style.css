@@ -17,7 +17,6 @@ body {
     min-height: 100%;
     width: 100%;
     font-family: 'Alata', sans-serif;
-    /* font-family: 'Josefin Sans', sans-serif; */
 }
 
 *,
@@ -71,7 +70,7 @@ button {
     display: none;
 }
 
-.overflow-hidden {
+.hidden {
     overflow: hidden;
 }
 
@@ -458,9 +457,9 @@ footer small {
         display: grid;
         place-items: initial;
         grid-template-columns: .55fr .15fr .15fr auto;
-        grid-template-rows: .35fr .65fr;
+        grid-template-rows: .38fr .62fr;
         grid-template-areas:
-            "hero-img hero-img purple-block"
+            "hero-img hero-img white-block"
             "hero-img hero-img hero-text";
         /* used for hover effect */    
         z-index: 0;
@@ -482,8 +481,8 @@ footer small {
         position: absolute;
     }
 
-    .purple-block {
-        grid-area: purple-block;
+    .white-block {
+        grid-area: white-block;
         display: initial;
         width: 100%;
         height: 100%;
@@ -505,11 +504,12 @@ footer small {
         z-index: 3;
         position: absolute;
         background-color: white;
-        margin: 0 auto;
+        margin-top: 0;
+        /* margin: 0 auto; */
     }
 
     .hero-text h2 {
-        font-size: 2.7rem;
+        font-size: 2.8rem;
         letter-spacing: 2px;
         font-weight: 600;
         text-align: center;
@@ -518,13 +518,14 @@ footer small {
     }
 
     .hero-text p {
+        font-size: 1.05rem;
         padding: 0;
         margin: 0 0 0 1.8em;
         color: var(--dark-gray);
         font-weight: 600;
         text-align: left;
-        line-height: 1.4;
-        letter-spacing: .25px;
+        line-height: 1.6;
+        letter-spacing: 0;
     }
 
     .flex {
@@ -532,11 +533,12 @@ footer small {
         height: 100%;
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: end;
     }
 
     .flex div {
         width: 90%;
+        margin-left: 4em;
     }
 
     /* end of top content */

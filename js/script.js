@@ -7,11 +7,11 @@ const exitIcon = document.getElementById("exit-icon-js");
 hamburgerIcon.addEventListener('click', () => {
     mobileMenuJs.classList.remove("remove");
     header.classList.add("remove");
-    body.classList.add("overflow-hidden");
+    body.classList.add("hidden");
 });
 
 exitIcon.addEventListener('click', () => {
     mobileMenuJs.classList.add("remove");
     header.classList.remove("remove");
-    body.classList.remove("overflow-hidden");
+    body.classList.remove("hidden");
 });
